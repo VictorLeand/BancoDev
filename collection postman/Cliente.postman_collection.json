@@ -1,0 +1,161 @@
+{
+  "info": {
+    "_postman_id": "15554230-039b-4d29-b54c-547c63f459ae",
+    "name": "Cliente",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38782023"
+  },
+  "item": [
+    {
+      "name": "crea un cliente",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Ana Pérez\",\r\n  \"genero\": \"FEMENINO\",\r\n  \"edad\": 28,\r\n  \"identificacion\": \"1745678901\",\r\n  \"direccion\": \"Av. 10 de Agosto y Colón\",\r\n  \"telefono\": \"099123456\",\r\n  \"contrasena\": \"abcd\",\r\n  \"estado\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/clientes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "obtiene un cliente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/clientes/1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes",
+            "1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "lista los clientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/clientes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reemplaza todos los datos",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Ana Pérez\",\r\n  \"genero\": \"FEMENINO\",\r\n  \"edad\": 29,\r\n  \"identificacion\": \"1745678901\",\r\n  \"direccion\": \"Av. Amazonas y Patria\",\r\n  \"telefono\": \"099123456\",\r\n  \"contrasena\": \"abcd1234\",\r\n  \"estado\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/clientes/1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes",
+            "1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actualiza solo los campos enviados",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"telefono\": \"098000111\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/clientes/1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes",
+            "1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "elimina al cliente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/clientes/1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "clientes",
+            "1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

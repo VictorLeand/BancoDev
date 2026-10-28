@@ -1,0 +1,166 @@
+{
+  "info": {
+    "_postman_id": "ac0c5c20-d250-4318-ac97-88282353ae14",
+    "name": "Cuenta",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38782023"
+  },
+  "item": [
+    {
+      "name": "lista las cuentas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "lista las cuentas de un cliente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas?clienteId=1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas"
+          ],
+          "query": [
+            {
+              "key": "clienteId",
+              "value": "1B2C3D4E5F6A47B8C9D0E1F2A3B4C5D6"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "nueva cuenta",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"numeroCuenta\": \"585545\",\r\n  \"tipoCuenta\": \"CORRIENTE\",\r\n  \"saldoInicial\": 1000,\r\n  \"estado\": true,\r\n  \"clienteId\": \"8F3A2C1D9E4B4F6A8C7D1E2F3A4B5C6D\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "obtiene una cuenta",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas/225487",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas",
+            "225487"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actualiza todo lo modificable",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tipoCuenta\": \"CORRIENTE\",\r\n  \"estado\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas/585545",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas",
+            "585545"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actualiza solo lo que se envia",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"estado\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/cuentas/585545",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "cuentas",
+            "585545"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
